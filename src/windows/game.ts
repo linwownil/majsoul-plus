@@ -1,7 +1,6 @@
 import {
   BrowserWindow,
   BrowserWindowConstructorOptions,
-  dialog,
   ipcMain,
   Menu,
   MenuItem,
@@ -9,10 +8,9 @@ import {
   MenuItemConstructorOptions,
   app
 } from 'electron'
-import { AddressInfo } from 'net'
 import * as path from 'path'
-import { SaveConfigJson, UserConfigs } from '../config'
-import { Global, Logger, RemoteDomains } from '../global'
+import { UserConfigs, SaveConfigJson } from '../config'
+import { Global, Logger } from '../global'
 import i18n from '../i18n'
 import {
   CloseServer,
@@ -22,9 +20,9 @@ import {
   LoadServer
 } from '../server'
 import { getRemoteUrl } from '../utils';
-import { ToolManager } from '../tool/tool'
 import { AudioPlayer, initPlayer, shutoffPlayer } from './audioPlayer'
-import { ManagerWindow } from './manager'
+import { ToolManager } from '../tool/tool'
+import { AddressInfo } from 'net'
 
 export class GameWindows {
   private static windows: Map<number, BrowserWindow> = new Map()
