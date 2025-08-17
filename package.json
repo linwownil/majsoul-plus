@@ -128,7 +128,7 @@
     "ncp": "^2.0.0",
     "run-electron": "^2.0.0",
     "sass-embedded": "^1.90.0",
-    "typescript": "^5.9.2",
-    "yarn": "^1.22.19"
-  }
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "yarn@4.9.2"
 }
