@@ -100,7 +100,7 @@ class ResourceManager {
       section['ondrop'] = event => {
         event.preventDefault()
         for (const file of event.dataTransfer.files) {
-          const filePath = file.path
+          const filePath = (file as any).path
           const ext = path.extname(filePath)
           const type = {
             '.mspr': 'resourcepack',
