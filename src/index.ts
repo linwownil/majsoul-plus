@@ -206,8 +206,8 @@ app.on('ready', () => {
 })
 
 // 监听 GPU 进程崩溃事件
-app.on('gpu-process-crashed', (event, killed) => {
-  Logger.error(`gpu-process-crashed, killed: ${killed}`)
+app.on('child-process-gone', (event, details) => {
+  Logger.error(`child-process-gone, details: ${details}`)
 })
 
 // uncaught exception
